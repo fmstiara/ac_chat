@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<label for="content">Say Something</label>
+<input type="text" id="chat-input" data-behavior="room_speaker"/>
+
+<h1>Chat room</h1>
+<div id='messages' data-room_id="<%= @room.id %>">
+  <%= render @messages %>
+</div>
+
+<%= link_to 'Edit', edit_room_path(@room) %> |
+<%= link_to 'Back', rooms_path %>
